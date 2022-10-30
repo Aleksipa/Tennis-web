@@ -167,11 +167,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{" "}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Data Tennis!
-          </a>
+        <h1 className="block lg:flex text-6xl font-bold">
+          Welcome to <p className="text-blue-600 ml-4"> Data Tennis!</p>
         </h1>
 
         <p className="mt-3 text-2xl">
