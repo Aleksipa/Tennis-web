@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Popupbox from "../components/info";
 import Popup from "../components/info";
 
 const matches = [
@@ -127,11 +128,30 @@ const Home: NextPage = () => {
           This is the site for finding the most profitable tennis matches to bet
           on.
         </p>
+
+        <div className="mt-12 text-md max-w-2xl ">
+          Here you will find odds from the{" "}
+          <a className="underline" href="https://www.bet365.com/#/AS/B13/">
+            Bet365
+          </a>{" "}
+          and{" "}
+          <a
+            className="underline"
+            href="https://www.pinnacle.com/en/betting-odds/tennis/"
+          >
+            Pinnacle
+          </a>{" "}
+          bookmakers, as well as the EV (expected value) of each match. Happy
+          betting!
+        </div>
+
         <div className="px-4 sm:px-6 lg:px-8 lg:pt-24">
           <div className="sm:flex sm:items-center">
             <div className="sm:flex-auto">
               <h1 className="text-xl font-semibold text-gray-900">ATP Paris</h1>
-              <p className="mt-2 text-sm text-gray-700">Round 1 Matches</p>
+              <p className="mt-2 text-sm text-gray-700">
+                Round 2 Matches UPDATED: 01.11.2022 21.15 (EET)
+              </p>
             </div>
           </div>
           <div className="mt-8 flex flex-col">
