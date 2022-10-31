@@ -1,8 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Popupbox from "../components/info";
-import Popup from "../components/info";
 
 const matches = [
   {
