@@ -1,160 +1,112 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import Popup from "../components/info";
 
 const matches = [
   {
-    matchup: "Alex Molcan vs. Richard Gasquet",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 2.37,
-    bet365_2: 1.57,
-    EV_1: 0.05,
-    EV_2: 0.05,
+    bet365_1: 2.62,
+    bet365_2: 1.5,
+    data_tennis_1: 2.02,
+    data_tennis_2: 1.98,
+    EV_1: "0.30",
+    EV_2: "-0.24",
+    matchup: "Corentin Moutet vs. Borna Coric",
+    Pinnacle_1: 2.64,
+    Pinnacle_2: 1.5,
+    Pinnacle_EV_1: "0.31",
+    Pinnacle_EV_2: "-0.24",
   },
   {
-    matchup: "Andy Murray vs. Gilles Simon",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 1.25,
-    bet365_2: 4.0,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Arthur Rinderknech vs. Jack Draper",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 2.37,
-    bet365_2: 1.57,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Aslan Karatsev vs. Yoshihito Nishioka",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 2.75,
-    bet365_2: 1.44,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Botic Van De Zandschulp vs. Gilles Simon",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 2.3,
-    bet365_2: 1.61,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Daniel Evans vs. Brandon Nakashima",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
     bet365_1: 1.9,
     bet365_2: 1.9,
-    EV_1: -0.02,
-    EV_2: 0.04,
+    data_tennis_1: 2.01,
+    data_tennis_2: 1.99,
+    EV_1: "-0.05",
+    EV_2: "-0.05",
+    matchup: "Daniel Evans vs. Brandon Nakashima",
+    Pinnacle_1: 1.925,
+    Pinnacle_2: 1.943,
+    Pinnacle_EV_1: "-0.04",
+    Pinnacle_EV_2: "-0.02",
   },
   {
-    matchup: "Denis Shapovalov vs. Francisco Cerundolo",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 1.28,
-    bet365_2: 3.75,
-    EV_1: -0.02,
-    EV_2: +0.04,
+    bet365_1: 2.37,
+    bet365_2: 1.57,
+    data_tennis_1: 2.05,
+    data_tennis_2: 1.95,
+    EV_1: "0.16",
+    EV_2: "-0.19",
+    matchup: "Arthur Rinderknech vs. Jack Draper",
+    Pinnacle_1: 2.36,
+    Pinnacle_2: 1.636,
+    Pinnacle_EV_1: "0.15",
+    Pinnacle_EV_2: "-0.16",
   },
   {
-    matchup: "Diego Schwartzman vs. Stan Wawrinka",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 2.5,
-    bet365_2: 1.53,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Holger Vitus Nodskov Rune vs. Stan Wawrinka",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 1.5,
-    bet365_2: 2.65,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Hubert Hurkacz vs. Adrian Mannarino",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
     bet365_1: 1.25,
-    bet365_2: 4.0,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Marin Cilic vs. Lorenzo Musetti",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 1.57,
-    bet365_2: 2.37,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Miomir Kecmanovic vs. Cameron Norrie",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 2.3,
-    bet365_2: 1.61,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
+    bet365_2: 4,
+    data_tennis_1: 2.05,
+    data_tennis_2: 1.95,
+    EV_1: "-0.39",
+    EV_2: "1.05",
     matchup: "Pablo Carreno-Busta vs. Albert Ramos-Vinolas",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
+    Pinnacle_1: 1.241,
+    Pinnacle_2: 4.38,
+    Pinnacle_EV_1: "-0.39",
+    Pinnacle_EV_2: "1.25",
+  },
+  {
     bet365_1: 1.25,
-    bet365_2: 4.0,
-    EV_1: -0.02,
-    EV_2: 0.04,
+    bet365_2: 4,
+    data_tennis_1: 1.82,
+    data_tennis_2: 2.22,
+    EV_1: "-0.31",
+    EV_2: "0.80",
+    matchup: "Hubert Hurkacz vs. Adrian Mannarino",
+    Pinnacle_1: 1.268,
+    Pinnacle_2: 4.08,
+    Pinnacle_EV_1: "-0.30",
+    Pinnacle_EV_2: "0.84",
   },
   {
+    bet365_1: 1.66,
+    bet365_2: 2.2,
+    data_tennis_1: 2.07,
+    data_tennis_2: 1.93,
+    EV_1: "-0.20",
+    EV_2: "0.14",
     matchup: "Roberto Bautista-Agut vs. Tommy Paul",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 1.72,
-    bet365_2: 2.1,
-    EV_1: -0.02,
-    EV_2: 0.04,
+    Pinnacle_1: 1.657,
+    Pinnacle_2: 2.32,
+    Pinnacle_EV_1: "-0.20",
+    Pinnacle_EV_2: "0.20",
   },
   {
-    matchup: "Sebastian Baez vs. Karen Khachanov",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 5.0,
-    bet365_2: 1.16,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Sebastian Korda vs. Alex De Minaur",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
-    bet365_1: 1.8,
-    bet365_2: 2.0,
-    EV_1: -0.02,
-    EV_2: 0.04,
-  },
-  {
-    matchup: "Taylor Fritz vs. Alejandro Davidovich Fokina",
-    data_tennis_1: 2.11,
-    data_tennis_2: 2.22,
     bet365_1: 1.28,
     bet365_2: 3.75,
-    EV_1: -0.02,
-    EV_2: 0.04,
+    data_tennis_1: 1.92,
+    data_tennis_2: 2.09,
+    EV_1: "-0.33",
+    EV_2: "0.79",
+    matchup: "Denis Shapovalov vs. Francisco Cerundolo",
+    Pinnacle_1: 1.273,
+    Pinnacle_2: 4.02,
+    Pinnacle_EV_1: "-0.34",
+    Pinnacle_EV_2: "0.92",
+  },
+  {
+    bet365_1: 1.53,
+    bet365_2: 2.5,
+    data_tennis_1: 1.94,
+    data_tennis_2: 2.07,
+    EV_1: "-0.21",
+    EV_2: "0.21",
+    matchup: "Holger Rune vs. Stan Wawrinka",
+    Pinnacle_1: 1.584,
+    Pinnacle_2: 2.49,
+    Pinnacle_EV_1: "-0.18",
+    Pinnacle_EV_2: "0.20",
   },
 ];
 
@@ -175,7 +127,6 @@ const Home: NextPage = () => {
           This is the site for finding the most profitable tennis matches to bet
           on.
         </p>
-
         <div className="px-4 sm:px-6 lg:px-8 lg:pt-24">
           <div className="sm:flex sm:items-center">
             <div className="sm:flex-auto">
@@ -216,9 +167,33 @@ const Home: NextPage = () => {
                         </th>
                         <th
                           scope="col"
-                          className="whitespace-nowrap px-6 pr-20 py-3.5 text-left text-sm font-semibold text-gray-900"
+                          className="whitespace-nowrap px-6 pr-10 py-3.5 text-left text-sm font-semibold text-gray-900"
                         >
                           Bet 365 2
+                        </th>
+                        <th
+                          scope="col"
+                          className="whitespace-nowrap px-6 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          EV 1
+                        </th>
+                        <th
+                          scope="col"
+                          className="whitespace-nowrap px-6 pr-20 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          EV 2
+                        </th>
+                        <th
+                          scope="col"
+                          className="whitespace-nowrap px-6 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Pinnacle 1
+                        </th>
+                        <th
+                          scope="col"
+                          className="whitespace-nowrap px-6 pr-10 py-3.5 text-left text-sm font-semibold text-gray-900"
+                        >
+                          Pinnacle 2
                         </th>
                         <th
                           scope="col"
@@ -232,6 +207,7 @@ const Home: NextPage = () => {
                         >
                           EV 2
                         </th>
+
                         <th
                           scope="col"
                           className="relative whitespace-nowrap py-3.5 pl-3 pr-4 sm:pr-6"
@@ -255,14 +231,26 @@ const Home: NextPage = () => {
                           <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-900">
                             {match.bet365_1}
                           </td>
-                          <td className="whitespace-nowrap px-2 pr-20 py-2 text-sm text-gray-900">
+                          <td className="whitespace-nowrap px-2 pr-10 py-2 text-sm text-gray-900">
                             {match.bet365_2}
                           </td>
-                          <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-900">
+                          <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-600">
                             {match.EV_1}
                           </td>
-                          <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-900">
+                          <td className="whitespace-nowrap px-6 pr-20 py-2 text-sm text-gray-600">
                             {match.EV_2}
+                          </td>
+                          <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-900">
+                            {match.Pinnacle_1}
+                          </td>
+                          <td className="whitespace-nowrap px-2 pr-10 py-2 text-sm text-gray-900">
+                            {match.Pinnacle_2}
+                          </td>
+                          <td className="whitespace-nowrap px-2 py-2 text-sm text-gray-600">
+                            {match.Pinnacle_EV_1}
+                          </td>
+                          <td className="whitespace-nowrap px-6 py-2 text-sm text-gray-600">
+                            {match.Pinnacle_EV_2}
                           </td>
                         </tr>
                       ))}
